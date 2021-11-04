@@ -21,9 +21,9 @@ def animate(i):
     pair1_price_classic = client.get_buy_price(pair1)
     pair2_price_classic = client.get_sell_price(pair2)
     mid_pair_price_classic = client.get_sell_price(mid_pair)
-    pair1_price_reverse = client.get_buy_price(pair1)
+    pair1_price_reverse = client.get_sell_price(pair1)
     pair2_price_reverse = client.get_buy_price(pair2)
-    mid_pair_price_reverse = client.get_sell_price(mid_pair)
+    mid_pair_price_reverse = client.get_buy_price(mid_pair)
 
     token_1 = (amount / pair1_price_classic) * (1 - 0.00065)
     token_2 = (token_1 * mid_pair_price_classic) * (1 - 0.00065)
